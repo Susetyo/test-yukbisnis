@@ -1,0 +1,87 @@
+.card {
+    height: 300px;
+    border-radius: 15px;
+    width: 400px;
+    /* background-color: black; */
+    display: flex;
+    padding: 1rem;
+    border: 1px solid rgb(172, 162, 162);
+}
+
+.card__leftSide {
+    flex: 0.5;
+    border-right: 1px solid rgb(172, 162, 162);
+    padding: 10px;
+}
+
+.card__leftSide__personalInfo__mobile {
+    display: none;
+}
+
+.card__rightSide__personalInfo,
+.card__lefSide__personalInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.card__leftSide > img {
+    border-radius: 100%;
+    object-fit: contain;
+}
+
+.card__leftSide > h2 {
+    font-size: 2rem;
+}
+
+.card__rightSide {
+    flex: 0.5;
+    padding-left: 10px;
+    position: relative;
+}
+
+.card__rightSide__personalInfoContainer {
+    position: absolute;
+    top: 26%;
+    transform: translateY(-26%);
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 310px;
+        flex-direction: column;
+    }
+
+    .card__leftSide {
+        border-bottom: 1px solid rgb(172, 162, 162);
+        border-right: none;
+        display: flex;
+    }
+
+    .card__lefSide__personalInfo {
+        display: none !important;
+    }
+
+    .card__leftSide__personalInfo__mobile {
+        display: flex !important;
+        flex-direction: column;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .card__leftSide__personalInfo__mobile > h2 {
+        font-size: 1.5rem;
+    }
+
+    .card__leftSide__personalInfo__mobile > h3 {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .card__rightSide__personalInfoContainer {
+        top: 42%;
+    }
+
+    /* .card__leftSide__personalInfo__mobile >  */
+}
